@@ -1,0 +1,31 @@
+<!-- Custom Wazuh Rules — Ilyas Hodaiby SOC Homelab -->
+<!-- File location on Wazuh Manager: /var/ossec/etc/rules/custom-brute-force-rule.xml -->
+
+<group name="custom_ssh_bruteforce,">
+
+  <!-- Rule 100001: Fires at lower threshold than default rule 5763 for faster detection -->
+  <!-- Default fires at 8 failures in 120s — this fires at 5 failures in 60s -->
+  <rule id="100001" level="12" frequency="5" timeframe="60">
+    <if_matched_sid>5760</if_matched_sid>
+    <same_source_ip/>
+    <description>Custom: Rapid SSH authentication failures from single source — possible brute force</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+    <group>authentication_failures,brute_force,</group>
+  </rule>
+
+  <!-- Rule 100002: Detects username enumeration specifically -->
+  <!-- Fires when 3+ "invalid user" attempts come from same IP within 30 seconds -->
+  <!-- "invalid user" means the username doesn't exist — typical of automated scanning -->
+  <rule id="100002" level="8" frequency="3" timeframe="30">
+    <if_sid>5710</if_sid>
+    <same_source_ip/>
+    <description>Custom: SSH username enumeration — multiple invalid user attempts from single source</description>
+    <mitre>
+      <id>T1110.003</id>
+    </mitre>
+    <group>authentication_failures,enumeration,</group>
+  </rule>
+
+</group>
