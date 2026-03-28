@@ -1,0 +1,49 @@
+# ElastAlert Rule — SSH Brute Force Detection
+
+# Rule name (shows in TheHive case title)
+name: SSH Brute Force Detected
+
+# Rule type: fires when event count exceeds threshold
+type: frequency
+
+# Which Elasticsearch index to monitor
+index: wazuh-alerts-*
+
+# Conditions: 10+ matching events within 5 minutes
+num_events: 10
+timeframe:
+  minutes: 5
+
+# Filter: only look at SSH authentication failure alerts from Wazuh
+filter:
+  - term:
+      rule.id: "5763"
+
+# What fields to include in the alert
+include:
+  - data.srcip
+  - rule.description
+  - agent.name
+  - full_log
+
+# Alert action: create a case in TheHive
+alert:
+  - hivealerter
+
+# TheHive connection settings (update with your TheHive IP)
+hive_connection:
+  hive_host: http://192.168.56.11
+  hive_port: 9000
+  hive_apikey: YOUR_THEHIVE_API_KEY
+
+# Case details in TheHive
+hive_alert_config:
+  type: external
+  source: ElastAlert
+  severity: 2
+  tags:
+    - brute-force
+    - ssh
+    - T1110.001
+  title: "SSH Brute Force Detected — {data.srcip}"
+  description: "ElastAlert detected 10+ SSH authentication failures from the same source IP within 5 minutes. Wazuh rule 5763 triggered."
