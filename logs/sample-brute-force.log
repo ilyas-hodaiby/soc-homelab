@@ -1,1 +1,32 @@
+# Sample log snippet from /var/log/auth.log during SSH brute-force attack
+# Source IP: 192.168.56.30 (Kali Linux - attacker)
+# Target: soc-agent (192.168.56.20)
+# Date: 2024-11-12
+# Note: This is a sanitised sample from the lab environment
 
+Nov 12 14:02:13 soc-agent sshd[3412]: Failed password for root from 192.168.56.30 port 54321 ssh2
+Nov 12 14:02:14 soc-agent sshd[3413]: Failed password for root from 192.168.56.30 port 54322 ssh2
+Nov 12 14:02:15 soc-agent sshd[3414]: Failed password for root from 192.168.56.30 port 54323 ssh2
+Nov 12 14:02:16 soc-agent sshd[3415]: Failed password for invalid user admin from 192.168.56.30 port 54324 ssh2
+Nov 12 14:02:17 soc-agent sshd[3416]: Failed password for invalid user ubuntu from 192.168.56.30 port 54325 ssh2
+Nov 12 14:02:18 soc-agent sshd[3417]: Failed password for invalid user test from 192.168.56.30 port 54326 ssh2
+Nov 12 14:02:19 soc-agent sshd[3418]: Failed password for invalid user deploy from 192.168.56.30 port 54327 ssh2
+Nov 12 14:02:20 soc-agent sshd[3419]: Failed password for invalid user sysadmin from 192.168.56.30 port 54328 ssh2
+Nov 12 14:02:21 soc-agent sshd[3420]: Failed password for root from 192.168.56.30 port 54329 ssh2
+Nov 12 14:02:22 soc-agent sshd[3421]: Failed password for root from 192.168.56.30 port 54330 ssh2
+Nov 12 14:02:23 soc-agent sshd[3422]: Failed password for invalid user admin from 192.168.56.30 port 54331 ssh2
+Nov 12 14:02:24 soc-agent sshd[3423]: Failed password for invalid user ubuntu from 192.168.56.30 port 54332 ssh2
+Nov 12 14:02:25 soc-agent sshd[3424]: Failed password for root from 192.168.56.30 port 54333 ssh2
+Nov 12 14:02:26 soc-agent sshd[3425]: Failed password for invalid user user from 192.168.56.30 port 54334 ssh2
+Nov 12 14:02:27 soc-agent sshd[3426]: Failed password for invalid user ilyas from 192.168.56.30 port 54335 ssh2
+Nov 12 14:02:28 soc-agent sshd[3427]: Failed password for root from 192.168.56.30 port 54336 ssh2
+Nov 12 14:02:29 soc-agent sshd[3428]: Failed password for invalid user admin from 192.168.56.30 port 54337 ssh2
+Nov 12 14:02:30 soc-agent sshd[3429]: Failed password for invalid user ubuntu from 192.168.56.30 port 54338 ssh2
+Nov 12 14:02:44 soc-agent sshd[3445]: Failed password for root from 192.168.56.30 port 54352 ssh2
+Nov 12 14:02:45 soc-agent sshd[3446]: message repeated 8 times: [ Failed password for root from 192.168.56.30 port 54352 ssh2]
+# --- Wazuh rule 5763 fires here at 14:02:45 ---
+Nov 12 14:02:46 soc-agent sshd[3447]: Failed password for invalid user deploy from 192.168.56.30 port 54353 ssh2
+Nov 12 14:02:47 soc-agent sshd[3448]: Failed password for invalid user sysadmin from 192.168.56.30 port 54354 ssh2
+Nov 12 14:05:28 soc-agent sshd[3840]: Failed password for invalid user admin from 192.168.56.30 port 54762 ssh2
+Nov 12 14:05:29 soc-agent sshd[3841]: Failed password for invalid user deploy from 192.168.56.30 port 54763 ssh2
+# --- Attack ends at 14:05:29 — 432 total attempts, 0 successful ---
