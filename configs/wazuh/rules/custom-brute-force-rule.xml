@@ -15,7 +15,7 @@
     <group>authentication_failures,brute_force,</group>
   </rule>
 
-  <!-- Rule 100002: Detects username enumeration specifically -->
+  <!-- Rule 100002: Detects username enumeration -->
   <!-- Fires when 3+ "invalid user" attempts come from same IP within 30 seconds -->
   <!-- "invalid user" means the username doesn't exist — typical of automated scanning -->
   <rule id="100002" level="8" frequency="3" timeframe="30">
