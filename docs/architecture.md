@@ -71,3 +71,16 @@ Wazuh adds agent management, file integrity monitoring, and a pre-built rule set
 
 **Why ElastAlert over Kibana alerting?**
 ElastAlert offers more control over rule logic and natively integrates with TheHive's API — a more realistic and transferable skill for SOC work.
+
+## Lessons Learned
+
+- Custom Wazuh rules fire faster than 
+  default rules — threshold tuning matters
+- ElastAlert + TheHive integration 
+  reduces manual case creation to zero
+- MISP feeds need regular updates 
+  for accurate IOC matching
+- Log volume during brute-force = 
+  432 events in 3.5 minutes — 
+  Kibana spike detection is critical
+
