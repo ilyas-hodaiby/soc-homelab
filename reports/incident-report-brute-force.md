@@ -1,15 +1,15 @@
 # Incident Report — SSH Brute-Force Attack
 
-| Field | Value |
-|---|---|
-| **Report ID** | INC-2024-001 |
-| **Date of Incident** | 2024-11-12 |
-| **Date of Report** | 2024-11-12 |
-| **Analyst** | Ilyas Hodaiby |
-| **Severity** | High |
-| **Classification** | True Positive |
-| **Status** | Closed |
-| **MITRE ATT&CK** | T1110.001 — Brute Force: Password Guessing |
+ | Field | Value |
+ |---|---|
+ | **Report ID** | INC-2024-001 |
+ | **Date of Incident** | 2024-11-12 |
+ | **Date of Report** | 2024-11-12 |
+ | **Analyst** | Ilyas Hodaiby |
+ | **Severity** | High |
+ | **Classification** | True Positive |
+ | **Status** | Closed |
+ | **MITRE ATT&CK** | T1110.001 — Brute Force: Password Guessing |
 
 ---
 
