@@ -1,12 +1,12 @@
 # 🛡️ SOC Homelab — Threat Detection & Incident Response Lab
 
-> **Built by Ilyas Hodaiby** — A fully operational Security Operations Center lab simulating real-world threat detection, log analysis, alerting, and incident response using industry-standard tools.
+> **Built by Ilyas Hodaiby** A fully operational Security Operations Center lab simulating real-world threat detection, log analysis, alerting, and incident response using industry-standard tools.
 
 ---
 
 ## 📌 Overview
 
-This project is a hands-on SOC lab I built from scratch to simulate how a real Security Operations Center detects, investigates, and responds to cyber threats. I deployed a full detection and response stack across multiple virtual machines, configured each tool end-to-end, and ran a live SSH brute-force attack simulation to validate the entire pipeline — from raw log ingestion to a closed incident case.
+This project is a hands-on SOC lab I built from scratch to simulate how a real Security Operations Center detects, investigates, and responds to cyber threats. I deployed a full detection and response stack across multiple virtual machines, configured each tool end-to-end, and ran a live SSH brute-force attack simulation to validate the entire pipeline from raw log ingestion to a closed incident case.
 
 The goal was to understand SOC workflows at a practical level: how logs travel through a pipeline, how alerts get triggered and tuned, and how analysts manage incidents from detection to resolution.
 
