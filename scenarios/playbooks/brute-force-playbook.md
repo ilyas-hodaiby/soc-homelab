@@ -63,7 +63,7 @@ Even if no successful login was found, check for signs the attacker found anothe
 If the attack is still ongoing:
 
 ```bash
-# Block attacker IP immediately
+# Block attacker IP immediately in FW
 sudo ufw deny from ATTACKER_IP to any
 sudo ufw reload
 
