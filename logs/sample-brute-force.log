@@ -29,4 +29,5 @@ Nov 12 14:02:46 soc-agent sshd[3447]: Failed password for invalid user deploy fr
 Nov 12 14:02:47 soc-agent sshd[3448]: Failed password for invalid user sysadmin from 192.168.56.30 port 54354 ssh2
 Nov 12 14:05:28 soc-agent sshd[3840]: Failed password for invalid user admin from 192.168.56.30 port 54762 ssh2
 Nov 12 14:05:29 soc-agent sshd[3841]: Failed password for invalid user deploy from 192.168.56.30 port 54763 ssh2
-# --- Attack ends at 14:05:29 — 432 total attempts, 0 successful ---
+Nov 12 14:05:30 soc-agent sshd[3841]: Failed password for invalid user deploy from 192.168.56.30 port 54763 ssh2
+# --- Attack ends at 14:05:29 — 433 total attempts, 0 successful ---
