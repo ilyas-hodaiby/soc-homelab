@@ -151,30 +151,22 @@ soc-homelab/
 │
 ├── README.md
 ├── docs/
-│   ├── architecture.md
-│   └── setup/
-│       ├── wazuh-setup.md
-│       ├── elk-setup.md
-│       ├── misp-setup.md
-│       └── thehive-setup.md
+│   ├── architecture.md        # data flow and role of each component
+│   └── tools-setup.md         # how each tool was installed and configured
 ├── configs/
 │   ├── wazuh/
 │   │   ├── ossec.conf
 │   │   └── rules/custom-brute-force-rule.xml
 │   ├── elk/
 │   │   └── logstash-pipeline.conf
-│   ├── elastalert/
-│   │   └── ssh-brute-force-rule.yaml
-│   └── thehive/
-│       └── application.conf
+│   └── elastalert/
+│       └── ssh-brute-force-rule.yaml
 ├── scenarios/
 │   ├── brute-force/
 │   │   ├── README.md
 │   │   └── detection-analysis.md
 │   └── playbooks/
 │       └── brute-force-playbook.md
-├── screenshots/
-│   └── (add your screenshots here)
 ├── logs/
 │   └── sample-brute-force.log
 └── reports/
@@ -186,6 +178,6 @@ soc-homelab/
 ## 👤 About
 
 **Ilyas Hodaiby** — MSc Computer Science student at Ulster University London  
-Aspiring SOC Analyst | Cybersecurity Student | Preparing for eCTHP
+SOC Analyst with 1.5 years in a 24/7 SOC (DATAPROTECT, Morocco) | Preparing for eCTHP
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/ilyas-hodaiby)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/ilyas-hodaiby-7216a3238)
