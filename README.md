@@ -144,19 +144,6 @@ Hydra (Kali) ──► SSH failed logins (Ubuntu) ──► Wazuh Agent collects
 
 ---
 
-## 📸 Related Screenshots
-
-Screenshots from the original run of this lab were not kept. The scenario is documented through the configs, the [sample log](logs/sample-brute-force.log), the [detection analysis](scenarios/brute-force/detection-analysis.md) and the [incident report](reports/incident-report-brute-force.md) in this repo.
-
-The same TheHive and Cortex stack is used in the SOAR module of my [Threat Hunting Lab](https://github.com/ilyas-hodaiby/Threat-hunting-lab/tree/main/module-2-soar). Screenshots of a real case there:
-
-- [Case overview](https://github.com/ilyas-hodaiby/Threat-hunting-lab/blob/main/module-2-soar/thehive-case-overview.png)
-- [Case creation](https://github.com/ilyas-hodaiby/Threat-hunting-lab/blob/main/module-2-soar/thehive-case-creation.png)
-- [Case tasks](https://github.com/ilyas-hodaiby/Threat-hunting-lab/blob/main/module-2-soar/thehive-case-tasks.png)
-- [Observables](https://github.com/ilyas-hodaiby/Threat-hunting-lab/blob/main/module-2-soar/thehive-case-observabless.png)
-
----
-
 ## 📂 Repository Structure
 
 ```
